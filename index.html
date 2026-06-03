@@ -1,117 +1,55 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-    <title>ANIMACIONES CSS - ANIMATION</title>
+    <meta charset="UTF-8">
+    <title>Mis Proyectos</title>
     <style>
-    h1{
-        font-family: "century gothic";
-        color: rgba(165, 42, 42, 0);
-        text-align: center;
-
-        animation-name: titulo;/* titulo para la animacion */
-        animation-duration: 2s;/* duracion de la animacion */
-        animation-iteration-count: 1;/* cantidad de veces que se realiza la animacion */
-        animation-fill-mode: forwards;/* indicas cual es el ultimo estado en que se queda */
-    }
-
-    @keyframes titulo{
-        from{
-            color: rgba(165, 42, 42, 0);
+        /* El profesor indicó que el estilo es libre, aquí tienes uno básico */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 20px;
         }
-        to{
-            color: rgb(165, 42, 42, 1);
+        h1 {
+            color: #333;
+            text-transform: uppercase;
         }
-    }
-    p1{
-        text-align: justify;
-        font-family: "century gothic";
-        font-weight: bold;
-        animation-name: texto;
-        animation-duration: 2s;
-        animation-iteration-count: 1;
-        animation-fill-mode: backwards;
-        animation-delay: 1s;
-    }
-    @keyframes texto{
-        from{
-            color: rgba(0, 0 , 0, 0);
+        ul {
+            font-size: 18px;
         }
-        to{
-            color: rgba(0, 0, 0, 1);
+        li {
+            margin-bottom: 15px;
         }
-    }
-    p{
-        text-align: justify;
-        font-family: "century gothic";
-        animation-name: texto;
-        animation-duration: 2s;
-        animation-iteration-count: 1;
-        animation-fill-mode: backwards;
-        animation-delay: 3s;
-    }
-    @keyframes texto{
-        from{
-            color: rgba(0, 0 , 0, 0);
+        a {
+            text-decoration: none;
+            color: #d35400; /* Un tono naranja, puedes cambiarlo */
+            font-weight: bold;
         }
-        to{
-            color: rgba(0, 0, 0, 1);
+        a:hover {
+            color: #000;
         }
-    }
-    p2{
-        text-align: justify;
-        font-family: "century gothic";
-        animation-name: texto;
-        animation-duration: 2s;
-        animation-iteration-count: 1;
-        animation-fill-mode: backwards;
-        animation-delay: 7s;
-    }
-    @keyframes texto{
-        from{
-            color: rgba(0, 0 , 0, 0);
-        }
-        to{
-            color: rgba(0, 0, 0, 1);
-        }
-    }
-    img{
-        height: 200px;
-        width: 400px;
-        display: block;/* modo de mostrar el objeto */
-        margin: auto;/* centrar imagen */
-        opacity: 0;
-        animation: imagen 1.5s  5s 1 forwards;
-    }
-    @keyframes imagen{
-        from{
-            opacity: 0;
-        }
-        to{
-            opacity: 1;
-        }
-    }
-    
     </style>
 </head>
 <body>
-    <h1>MANUEL SEOANE CORRALES</h1>
-<p1><tr>Biografia</tr></p1>
-<p>
-    Manuel Seoane Corrales (1900 – 1963) fue un destacado periodista,
-    abogado y politico peruano, figura clave en la fundación y consolidacion
-    del APRA. Es recordado por su brillante oratoria y su labor defensora de
-    la justicia social, lo que le valio el apodo de "EL CACHORRO". A lo largo
-    de su vida, alternó su pasion por las letras, siendo director de importantes
-    revistas como Claridad y Ercilla en el exilio, con una carrera diplomatica y
-    politica de gran impacto, llegando a ser VICEPRECIDENTE del Perú y una de las 
-    mentes intelectuales más influyentes de su epoca.
-</p>
-<img src="img/manuel_seoane.png">
 
-<p2>
-    Como dato adicional el IESTP Manuel Seoane Corrales fue fundado en 1985 gracias
-    a la gestión de dirigentes vecinales y autoridades locales, y este rinde homenaje a 
-    este destacado personaje.
-</p2>
+    <!-- Título principal -->
+    <h1>MIS PROYECTOS DE ANIMACION WEB</h1>
+
+    <!-- Lista de viñetas con los hipervínculos a cada subcarpeta -->
+    <ul>
+        <li>
+            <a href="ANIMACION 1/index.html">Proyecto 1 - Tablero de ajedrez</a>
+        </li>
+        <li>
+            <a href="ANIMACION 2/index.html">Proyecto 2 - Animacion basica</a>
+        </li>
+        <li>
+            <a href="ANIMACION 3/index.html">Proyecto 3 - Animacion por pasos</a>
+        </li>
+        <li>
+            <a href="Semana 07/index.html">Semana 7 - Parallax + svg</a>
+        </li>
+    </ul>
 
 </body>
 </html>

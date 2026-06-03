@@ -1,0 +1,116 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: black;
+}
+.contenedor{
+    width: 500px;
+    height: 800px;
+    border: 1px solid white;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+.cielo{
+    position: absolute;
+    left: -200px;
+    top: -50px;
+    filter: blur(3px);
+    animation: cielo 20s 1 forwards;
+}
+@keyframes cielo{
+    from{
+        scale: 100%;
+        filter: blur(3px);
+    }
+    to{
+        scale: 130%;
+        filter: blur(1px);
+    }
+}
+.montaña{
+    position: absolute;
+    left: -500px;
+    animation: montaña 10s 1 forwards;
+}
+@keyframes montaña{
+    from{
+        top: 0px;
+        scale: 100%;
+        filter: blur(5px);
+    }
+    to{
+        top: -50px;
+        scale: 130%;
+        filter: blur(0px);
+    }
+}
+
+.persona{
+    position: absolute;
+    width: 800px;
+    left: -150px;
+    bottom: -20px;
+    z-index: 4;
+    animation: persona 15s 1 forwards;
+}
+@keyframes persona{
+    from{
+        scale: 120%;
+    }
+    to{
+        scale: 90%;
+    }
+}
+.neblina{
+    position: absolute;
+    width: 800px;
+    left: -150px;
+    bottom: -100px;
+    animation: neblina 20s 1 forwards;
+}
+@keyframes neblina{
+    from{
+        left: -300px;
+        scale: 100%;
+    }
+    to{
+        left: 200px;
+        scale: 150%;
+    }
+}.banner{
+    position: absolute;
+    left: 80px;
+    bottom: -300px;
+    animation: textanimation 2s 1 forwards;
+}
+svg path {
+    z-index: 6;
+    fill: transparent;
+    stroke: black;
+    stroke-width: 0.1;
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+    animation: textanimation 4s ease-in-out 1 forwards;
+}
+@keyframes textanimation{
+    0%{
+        left: 80px;
+        bottom: -300px;
+        stroke-dashoffset: 50;
+        scale: 70%;
+    }
+    80%{
+        
+        fill: transparent;
+    }
+    100%{
+        left: 80px;
+        top: 100px;
+        fill: #fff;
+        scale: 100%;
+        stroke-dashoffset: 0;
+    }
+}

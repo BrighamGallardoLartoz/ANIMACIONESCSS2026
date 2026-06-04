@@ -1,0 +1,152 @@
+<html>
+<head>
+<title>Personajes</title>
+<style>
+    *{ 
+        padding:0px; 
+        margin:0px; 
+    }
+
+    .contenedor{
+        width: 1000px;
+        height:300px;
+        border:1px solid black;
+        margin:50px auto;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0px 0px 20px rgb(0, 225, 255);
+    }
+
+    body{
+        background-color: black;
+    }
+
+    .tarjeta1, .tarjeta2, .tarjeta3, .tarjeta4, .tarjeta5 {
+        width: 200px;
+        height: 300px;
+        position: absolute;
+        background-size: cover;
+        transition: 1s;
+        box-shadow: 0px 0px 20px rgb(0, 225, 255);
+    }
+
+    .titulo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -100px;
+        color: white;
+        font-family: "Carrois Gothic", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 25px;
+        padding: 15px;
+        text-align: center;
+        z-index: 5;
+        background: rgba(0, 0, 0, 0.7);
+        border: 2px solid rgb(0, 225, 255);
+        box-shadow: 0px 0px 20px rgb(0, 225, 255);
+        white-space: nowrap;
+        animation: BajarTitulo 3s forwards 9s;
+    }
+
+    .tarjeta1{ 
+        background-image: url(img/css.jpg); 
+        left: 1020px; 
+        animation: Derecha 3s forwards 0s; 
+    }
+    .tarjeta5{ 
+        background-image: url(img/boostrap.png); 
+        left: -220px;
+        animation: Izquierda 3s forwards 0s; 
+    }
+
+    .tarjeta2{ 
+        background-image: url(img/js.jpg); 
+        left: 200px; 
+        top: -320px;
+        animation: Arriba 3s forwards 3s; 
+    }
+    .tarjeta4{ 
+        background-image: url(img/html.jpg); 
+        left: 600px; 
+        top: -320px;
+        animation: Arriba 3s forwards 3s; 
+    }
+
+    .tarjeta3{ 
+        background-image: url(img/php.jpg); 
+        left: 400px; 
+        top: 320px;
+        animation: Abajo 3s forwards 6s; 
+    }
+
+    /* ANIMACIONES */
+    @keyframes BajarTitulo {
+        from { 
+            top: -100px; 
+        }
+        to { top: 50%; 
+            transform: translate(-50%, -50%); 
+        }
+    }
+
+    @keyframes Derecha {
+        from { 
+            left: 1000px; 
+            transform: rotateY(180deg); 
+        }
+        to { 
+            left: 0px; 
+            transform: rotateY(0deg); 
+        }
+    }
+    @keyframes Izquierda {
+        from { 
+            left: -200px; 
+            transform: rotateY(180deg); 
+        }
+        to { 
+            left: 800px; 
+            transform: rotateY(0deg); 
+        }
+    }
+    @keyframes Arriba {
+        from { 
+            top: -320px; 
+            transform: rotateY(180deg); 
+        }
+        to { 
+            top: 0px; 
+            transform: rotateY(0deg); 
+        }
+    }
+    @keyframes Abajo {
+        from { 
+            top: 320px; 
+            transform: rotateY(180deg); 
+        }
+        to { 
+            top: 0px; 
+            transform: rotateY(0deg); 
+        }
+    }
+
+    .tarjeta1:hover, .tarjeta2:hover, .tarjeta3:hover, .tarjeta4:hover, .tarjeta5:hover{
+        scale: 1.2;
+        z-index: 1;
+    }
+</style>
+</head>
+<body>
+<div class="contenedor">
+    <div class="tarjeta1"></div>
+    <div class="tarjeta2"></div>
+    <div class="tarjeta3"></div>
+    <div class="tarjeta4"></div>
+    <div class="tarjeta5"></div>
+    <div class="titulo">Tecnología de desarrollo de software</div>
+</div>    
+</body>
+    <a href="../index.html">VOLVER</a>
+</html>

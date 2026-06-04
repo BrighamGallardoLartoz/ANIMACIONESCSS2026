@@ -1,0 +1,122 @@
+<html>
+    <head>
+        <title></title>
+        <style>
+            *{
+                margin:0px;
+                padding:0px;
+            }
+            .contenedor{
+                width: 800px;
+                height: 300px;
+                border:1px solid black;
+                margin: 0 auto;
+                position: relative;
+                overflow: hidden;
+            }
+            .cuadrito{
+                width: 100px;
+                height: 100px;
+                position:absolute;
+                top:0px;
+                left:0px;
+
+                animation: cuadrito 4s infinite ;
+            }
+        .abeja{
+                position: absolute;
+                width: 50px;
+                z-index: 0;
+        
+        }
+        .pradera{
+            position: absolute;
+            width: 800px;
+            left: 0px;
+            height: 200px;
+        }
+
+        .cielo{
+            position: absolute;
+            width: 50%;
+            left: 0px;
+            height: 100px;
+        }
+
+            
+            @keyframes cuadrito{
+                0%{
+                    top:0px;
+                    left:-100px;
+                    rotate:45deg;
+                }
+                50%{
+                    top:200px;
+                    left:350px;
+                    rotate:0deg;
+                }
+                100%{
+                    top:0px;
+                    left:700px;
+                    rotate:45deg;
+                }   
+             }
+
+        .avispa{
+                position: absolute;
+                width: 100px;
+                z-index: 0;
+        }
+
+        .cuadrito2{
+                width: 0px;
+                height: 100px;r
+                position: absolute;
+                top:0px;
+                left:0px;
+
+                animation: cuadrito 4s infinite 2s;
+            }
+
+
+            
+            @keyframes cuadrito2{
+                0%{
+                    top:0px;
+                    left:-100px;
+                    rotate:45deg;
+                }
+                50%{
+                    top:200px;
+                    left:350px;
+                    rotate:0deg;
+                }
+                100%{
+                    top:0px;
+                    left:700px;
+                    rotate:45deg;
+                }   
+             }
+
+        
+        </style>
+    </head>
+    <body>
+        <div class="contenedor">
+
+            <div class="cuadrito">
+                <img class="abeja" src="img/kawaii-bee-character-png.webp" alt="">
+            </div>
+           <div class="cuadrito2">
+                <img class="avispa" src="img/avispa.webp" alt="">
+            </div>
+
+            
+            <img class="cielo" src="img/pngtree-blue-sky-png-image_8952274.png" alt="">
+            <img class="pradera" src="img/pngtree-green-scenery-spring-plants-png-image_6779202.png" alt="">
+
+
+        </div>
+    </body>
+    <a href="../index.html">VOLVER</a>
+</html>

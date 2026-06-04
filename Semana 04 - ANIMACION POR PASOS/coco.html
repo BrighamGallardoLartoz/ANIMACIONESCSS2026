@@ -1,0 +1,152 @@
+<html>
+<head>
+<title>SPOT COCO</title>
+
+<style>
+    *{ padding:0px; margin:0px; box-sizing: border-box; }
+
+    body{ 
+        background-color: #111;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: 'Arial Black', sans-serif;
+    }
+
+    .contenedor{
+        width: 400px;
+        height: 700px;
+        background-color: #ffde22;
+        position: relative;
+        overflow: hidden;
+        border-radius: 20px;
+        box-shadow: 0px 0px 30px rgba(255, 222, 34, 0.5);
+    }
+
+    .img-absoluta {
+        position: absolute;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0;
+    }
+    .hoja-palmera {
+        width: 250px; height: 250px;
+        background-image: url('img/hoja.png'); 
+        top: -50px; right: -50px;
+        animation: EntrarFlotando 3s forwards, ZoomSalida 0.5s forwards 3s;
+    }
+
+    .coco-pedazo1 {
+        width: 150px; height: 150px;
+        background-image: url('img/pedazo-coco1.png'); 
+        top: 50px; left: -50px;
+        animation: EntrarGirandoIzq 3s forwards, ZoomSalida 0.5s forwards 3s;
+    }
+
+    .coco-pedazo2 {
+        width: 200px; height: 200px;
+        background-image: url('img/pedazo-coco2.png'); 
+        bottom: 50px; right: -50px;
+        animation: EntrarGirandoDer 3s forwards, ZoomSalida 0.5s forwards 3s;
+    }
+
+    .texto-escena1 {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        top: 35%;
+        opacity: 0;
+        animation: AparecerTexto 0.5s forwards 0.5s, ZoomSalida 0.5s forwards 3s;
+    }
+    .texto-escena1 .pequeno { font-size: 20px; color: #333; letter-spacing: 2px; }
+    .texto-escena1 .grande { font-size: 55px; color: white; line-height: 1; text-shadow: 2px 2px 5px rgba(0,0,0,0.1); }
+    .texto-escena2 {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        top: 25%;
+        opacity: 0;
+        animation: AparecerTexto 0.5s forwards 3.5s;
+    }
+    .texto-escena2 .grande { font-size: 65px; color: white; }
+    .texto-escena2 .pequeno { font-size: 50px; color: white; }
+
+    .coco-mitad {
+        width: 300px; height: 300px;
+        background-image: url('img/coco-mitad.png'); 
+        left: 50%; top: 60%;
+        transform: translate(-50%, -50%) scale(0);
+        animation: PopInCentro 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards 4s;
+    }
+
+    .flor-vainilla {
+        width: 150px; height: 150px;
+        background-image: url('img/flor.png'); 
+        left: 60%; top: 65%;
+        transform: scale(0);
+        z-index: 10;
+        animation: PopInFlor 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards 4.5s;
+    }
+
+    @keyframes EntrarFlotando {
+        0% { opacity: 0; transform: translate(50px, -50px); }
+        10% { opacity: 1; }
+        100% { opacity: 1; transform: translate(0px, 0px); }
+    }
+    @keyframes EntrarGirandoIzq {
+        0% { opacity: 0; transform: translate(-50px, -50px) rotate(-45deg); }
+        10% { opacity: 1; }
+        100% { opacity: 1; transform: translate(0px, 0px) rotate(15deg); }
+    }
+    @keyframes EntrarGirandoDer {
+        0% { opacity: 0; transform: translate(50px, 50px) rotate(45deg); }
+        10% { opacity: 1; }
+        100% { opacity: 1; transform: translate(0px, 0px) rotate(-15deg); }
+    }
+    @keyframes ZoomSalida {
+        to { transform: scale(3); opacity: 0; visibility: hidden; }
+    }
+
+    @keyframes AparecerTexto {
+        from { opacity: 0; transform: scale(0.8); }
+        to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes PopInCentro {
+        0% { opacity: 0; transform: translate(-50%, -50%) scale(0); }
+        100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+    }
+    @keyframes PopInFlor {
+        0% { opacity: 0; transform: scale(0); }
+        100% { opacity: 1; transform: scale(1); }
+    }
+
+</style>
+
+</head>
+
+<body>
+
+<div class="contenedor">
+    <div class="img-absoluta hoja-palmera"></div>
+    <div class="img-absoluta coco-pedazo1"></div>
+    <div class="img-absoluta coco-pedazo2"></div>
+    
+    <div class="texto-escena1">
+        <p class="pequeno">YA PROBASTE</p>
+        <p class="grande">EL NUEVO<br>SABOR</p>
+    </div>
+
+    <div class="texto-escena2">
+        <p class="grande">COCO</p>
+        <p class="pequeno">+ VAINILLA</p>
+    </div>
+    
+    <div class="img-absoluta coco-mitad"></div>
+    <div class="img-absoluta flor-vainilla"></div>
+</div>
+</body>
+    <a href="../index.html">VOLVER</a>
+</html>
